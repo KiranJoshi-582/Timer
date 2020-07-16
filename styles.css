@@ -3,17 +3,16 @@ body, button, input {
     cursor: default;
     background-color: #222;
     color:red;
+    margin: 0;
+    padding: 0;
 }
 
-body {
-    margin: 72px 140px 0;
-    background-image: url() ;
 
-}
 
 h1 {
     font-weight: 800;
     font-size: 74px;
+    margin-top: 0;
 }
 
 #controls {
@@ -31,7 +30,7 @@ h1 {
     font-size: 36px;
 }
 
-label {
+/* label {
     display: inline-block;
     width: 24%;
     font-weight: 200;
@@ -48,7 +47,7 @@ input {
     padding-left: 6px;
     font-weight: 200;
     outline: none;
-}
+} */
 
 input:disabled {
     background-color: white;
@@ -79,3 +78,48 @@ h2 {
     margin: 12px 0;
     padding-left: 100px;
   }
+
+
+  /* image input file */
+  .background-image {
+    background-image:url('') no-repeat center;
+    background-size:cover;
+    background-position: center;
+    /* overflow: hidden; */
+    height: 600px;
+    position: relative;
+    transition: 2s all ;
+}
+
+input[type="file"] {
+    display: none;
+}
+.image-file-upload {
+    background-color: rgba(50, 4, 3, 0.1);
+    border: 0.1px solid rgba(116, 116, 116, 0.2);
+    border-radius: 20px 20px;
+    /* display: inline-block; */
+    padding: 8px 14px;
+    cursor: pointer;
+    float: right;
+    margin: 25px;
+    
+   
+}
+
+.image-file-upload:hover{
+    border: 0.1px solid rgba(73, 73, 73, 0.500);
+    /* background-color: rgba(125, 253, 142, 0.6); */
+    transition: 0.2s ;
+    
+}
+
+.image-file-upload:active{
+    border: 1px solid rgba(8, 49, 0, 0.507);
+    background-color: rgba(47, 139, 59, 0.61);
+   
+}
+
+
+
+
