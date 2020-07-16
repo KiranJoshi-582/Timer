@@ -17,9 +17,11 @@ let timerObj = {
 // function showModel() {
 //     modal.showModal();
 // }
+const modal = document.getElementById("modal");
 function closeModal() {
-    modal.closeModal();
+    modal.close();
 }
+
 
 
 function soundAlarm() {
@@ -84,7 +86,7 @@ function startTimer() {
         if (timerObj.seconds < 0) {
             if (timerObj.minutes == 0) {
                 soundAlarm();
-                showModel();
+
                 return stopTimer();
             }
             timerObj.seconds = 59;
@@ -114,6 +116,7 @@ function stopTimer() {
             value = "0" + seconds;
         }
     }
+    modal.showModal();
     updateValue("seconds", seconds);
 }
 
